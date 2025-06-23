@@ -20,7 +20,7 @@ const LearningHeader = ({
   const headerLogo = (
     <LogoSlot
       href={`${getConfig().LMS_BASE_URL}/dashboard`}
-      src={getConfig().LOGO_URL}
+      src="https://makersasylum.com/wp-content/uploads/2021/12/logo-1.svg"
       alt={getConfig().SITE_NAME}
     />
   );
@@ -28,22 +28,37 @@ const LearningHeader = ({
   return (
     <header className="learning-header">
       <a className="sr-only sr-only-focusable" href="#main-content">{intl.formatMessage(messages.skipNavLink)}</a>
-      <div className="container-xl py-2 d-flex align-items-center">
-        {headerLogo}
-        <div className="flex-grow-1 course-title-lockup d-flex" style={{ lineHeight: 1 }}>
+      <div className="py-2 d-flex">
+        <div className="logo-area">
+          {headerLogo}
+        </div>
+        <div className="course-title-lockup d-flex" style={{ lineHeight: 1 }}>
           <CourseInfoSlot courseOrg={courseOrg} courseNumber={courseNumber} courseTitle={courseTitle} />
         </div>
-        {showUserDropdown && authenticatedUser && (
-        <>
-          <LearningHelpSlot />
-          <AuthenticatedUserDropdown
-            username={authenticatedUser.username}
-          />
-        </>
-        )}
-        {showUserDropdown && !authenticatedUser && (
-        <AnonymousUserMenu />
-        )}
+        <div className="flex-grow-1 d-flex learning-navigation" style={{ lineHeight: 1 }}>
+          <nav>
+            <ol>
+              <li><a href={`${getConfig().LMS_BASE_URL}/dashboard`}>Courses</a></li>
+              <li><a href="/dashboard/programs">Programs</a></li>
+              <li><a href="#">Schedule</a></li>
+            </ol>
+          </nav>
+        </div>
+        <div className="flex-grow-0 d-flex user-info-menu" style={{ lineHeight: 1 }}>
+          {showUserDropdown && authenticatedUser && (
+          <div className="d-flex align-items-center">
+            <LearningHelpSlot />
+            <AuthenticatedUserDropdown
+              username={authenticatedUser.username}
+            />
+          </div>
+          )}
+          <div className="d-flex align-items-right">
+            {showUserDropdown && !authenticatedUser && (
+            <AnonymousUserMenu />
+            )}
+          </div>
+        </div>
       </div>
     </header>
   );

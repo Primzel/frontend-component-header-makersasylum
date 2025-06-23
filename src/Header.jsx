@@ -15,6 +15,7 @@ import DesktopHeaderSlot from './plugin-slots/DesktopHeaderSlot';
 import MobileHeaderSlot from './plugin-slots/MobileHeaderSlot';
 
 import messages from './Header.messages';
+import LearningHeader from "./index";
 
 ensureConfig([
   'LMS_BASE_URL',
