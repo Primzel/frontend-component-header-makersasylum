@@ -59,7 +59,7 @@ var LearningHeader = function LearningHeader(_ref) {
     }
   }, showUserDropdown && authenticatedUser && /*#__PURE__*/React.createElement("div", {
     className: "d-flex align-items-center"
-  }, /*#__PURE__*/React.createElement(LearningHelpSlot, null), /*#__PURE__*/React.createElement(AuthenticatedUserDropdown, {
+  }, /*#__PURE__*/React.createElement(AuthenticatedUserDropdown, {
     username: authenticatedUser.username
   })), /*#__PURE__*/React.createElement("div", {
     className: "d-flex align-items-right"
