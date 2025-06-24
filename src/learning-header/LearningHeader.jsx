@@ -47,7 +47,6 @@ const LearningHeader = ({
         <div className="flex-grow-0 d-flex user-info-menu" style={{ lineHeight: 1 }}>
           {showUserDropdown && authenticatedUser && (
           <div className="d-flex align-items-center">
-            <LearningHelpSlot />
             <AuthenticatedUserDropdown
               username={authenticatedUser.username}
             />
