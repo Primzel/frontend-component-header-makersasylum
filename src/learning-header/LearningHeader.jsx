@@ -39,7 +39,7 @@ const LearningHeader = ({
           <nav>
             <ol>
               <li><a href={`${getConfig().LMS_BASE_URL}/dashboard`}>Courses</a></li>
-              <li><a href="/dashboard/programs">Programs</a></li>
+              <li><a href={`${getConfig().LMS_BASE_URL}/dashboard/programs`}>Programs</a></li>
               <li><a href="#">Schedule</a></li>
             </ol>
           </nav>

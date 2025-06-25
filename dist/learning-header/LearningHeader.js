@@ -49,7 +49,7 @@ var LearningHeader = function LearningHeader(_ref) {
   }, /*#__PURE__*/React.createElement("nav", null, /*#__PURE__*/React.createElement("ol", null, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
     href: "".concat(getConfig().LMS_BASE_URL, "/dashboard")
   }, "Courses")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
-    href: "/dashboard/programs"
+    href: "".concat(getConfig().LMS_BASE_URL, "/dashboard/programs")
   }, "Programs")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
     href: "#"
   }, "Schedule"))))), /*#__PURE__*/React.createElement("div", {
