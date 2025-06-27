@@ -23,6 +23,9 @@ var LearningHeader = function LearningHeader(_ref) {
     src: "https://makersasylum.com/wp-content/uploads/2021/12/logo-1.svg",
     alt: getConfig().SITE_NAME
   });
+  var _getConfig = getConfig(),
+    PUBLIC_PATH = _getConfig.PUBLIC_PATH;
+  console.log(PUBLIC_PATH);
   return /*#__PURE__*/React.createElement("header", {
     className: "learning-header"
   }, /*#__PURE__*/React.createElement("a", {
@@ -47,6 +50,7 @@ var LearningHeader = function LearningHeader(_ref) {
       lineHeight: 1
     }
   }, /*#__PURE__*/React.createElement("nav", null, /*#__PURE__*/React.createElement("ol", null, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+    className: PUBLIC_PATH === '/learner-dashboard/' ? 'active' : '',
     href: "".concat(getConfig().LMS_BASE_URL, "/dashboard")
   }, "Courses")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
     href: "".concat(getConfig().LMS_BASE_URL, "/dashboard/programs")
