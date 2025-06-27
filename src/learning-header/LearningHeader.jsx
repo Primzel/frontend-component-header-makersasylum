@@ -24,7 +24,8 @@ const LearningHeader = ({
       alt={getConfig().SITE_NAME}
     />
   );
-
+  const { PUBLIC_PATH } = getConfig();
+  console.log(PUBLIC_PATH);
   return (
     <header className="learning-header">
       <a className="sr-only sr-only-focusable" href="#main-content">{intl.formatMessage(messages.skipNavLink)}</a>
@@ -38,7 +39,12 @@ const LearningHeader = ({
         <div className="flex-grow-1 d-flex learning-navigation" style={{ lineHeight: 1 }}>
           <nav>
             <ol>
-              <li><a href={`${getConfig().LMS_BASE_URL}/dashboard`}>Courses</a></li>
+              <li><a
+                className={PUBLIC_PATH === '/learner-dashboard/' ? 'active' : ''}
+                href={`${getConfig().LMS_BASE_URL}/dashboard`}
+              >Courses
+              </a>
+              </li>
               <li><a href={`${getConfig().LMS_BASE_URL}/dashboard/programs`}>Programs</a></li>
               <li><a href="#">Schedule</a></li>
             </ol>

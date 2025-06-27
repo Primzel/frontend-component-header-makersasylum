@@ -126,7 +126,7 @@ $white: #fff;
             text-decoration: none;
             margin: auto !important;
 
-            &:hover, &:focus {
+            &:hover, &:focus, &.active {
               color: $blue;
               color: $brand;
               text-decoration: underline;
