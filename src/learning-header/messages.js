@@ -3,8 +3,8 @@ import { defineMessages } from '@edx/frontend-platform/i18n';
 const messages = defineMessages({
   dashboard: {
     id: 'header.menu.dashboard.label',
-    defaultMessage: 'Dashboard',
-    description: 'The text for the user menu Dashboard navigation link.',
+    defaultMessage: 'Courses',
+    description: 'The text for the user menu Courses navigation link.',
   },
   help: {
     id: 'header.help.label',

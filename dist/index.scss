@@ -93,7 +93,7 @@ $white: #fff;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      padding-bottom: 0.1rem;
+      padding-bottom: 5px !important;
     }
   }
 
@@ -140,6 +140,15 @@ $white: #fff;
   .user-info-menu {
     width: 20%;
 
+    .show {
+      button {
+        color: black !important;
+        span {
+          color: black !important;
+        }
+      }
+    }
+
     a {
       width: 50px !important;
       color: white !important;
@@ -163,7 +172,7 @@ $white: #fff;
         margin: auto !important;
       }
 
-      button:hover {
+      button:hover, button:visited {
         color: black !important;
 
         * {
@@ -172,8 +181,11 @@ $white: #fff;
       }
 
       .dropdown-menu {
+        height: unset;
         a {
+          height: 40px !important;
           color: black !important;
+          width: 100% !important;
         }
       }
     }
